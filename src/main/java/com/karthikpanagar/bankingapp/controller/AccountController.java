@@ -15,7 +15,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-
     @GetMapping("/{id}")
     public Account getAccount(@PathVariable Long id){
        return accountService.getAccount(id);
@@ -42,11 +41,6 @@ public class AccountController {
         return accountService.updateName(id, newName);
     }
 
-    @PostMapping("/{id}/deposit")
-    public Account deposit(@PathVariable Long id, @RequestBody Map<String, Double> request){
-        return accountService.deposit(id, request.get("amount"));
-    }
-
     @PostMapping("/{id}/{operation}")
     public Account withdraw(@PathVariable Long id, @PathVariable String operation, @RequestBody Map<String, Double> request) {
         if ("deposit".equalsIgnoreCase(operation)) {
@@ -57,10 +51,4 @@ public class AccountController {
             throw new IllegalArgumentException("Invalid operation: " + operation);
         }
     }
-
-
-
-
-
-
 }
