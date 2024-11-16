@@ -160,7 +160,8 @@ Response:
 - MySQL Database
 - Spring Data JPA
 
-_Author
-Karthik Panagar_
+_Author_
 
-For any queries or suggestions, feel free to reach out!
+_Karthik Panagar_
+
+_For any queries or suggestions, feel free to reach out!_
