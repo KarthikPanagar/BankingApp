@@ -33,38 +33,32 @@ It supports CRUD operations, deposit and withdrawal functionalities, and account
 **Dependencies**: AccountRepository, AccountPoolRepository.
 
 ### 2.  Account Deletion
-**Logic**:
-- Deletes the specified account by ID and returns the account number to the AccountPool for future use.
+**Logic**: Deletes the specified account by ID and returns the account number to the AccountPool for future use.
 
 **Dependencies**: AccountRepository, AccountPoolRepository.
 
 ### 3. Get All Accounts
-**Logic**:
-- Retrieves all accounts from the database.
+**Logic**: Retrieves all accounts from the database.
 
 **Dependencies**: AccountRepository.
 
 ### 4. Update Account Name
-**Logic**:
-- Updates the name of the account holder for a given account ID.
+**Logic**: Updates the name of the account holder for a given account ID.
 
 **Dependencies**: AccountRepository.
 
 ### 5. Get Account Details
-**Logic**:
-- Retrieves an account by its ID.
+**Logic**: Retrieves an account by its ID.
 
 **Dependencies**: AccountRepository.
 
 ### 6. Deposit Funds
-**Logic**:
-- Increases the account balance by the specified deposit amount.
+**Logic**: Increases the account balance by the specified deposit amount.
 
 **Dependencies**: AccountRepository.
 
 ### 7. Withdraw Funds
-**Logic**:
-- Decreases the account balance by the specified withdrawal amount. Ensures that the balance doesn't go below zero.
+**Logic**: Decreases the account balance by the specified withdrawal amount. Ensures that the balance doesn't go below zero.
 
 **Dependencies**: AccountRepository.
 
