@@ -21,53 +21,59 @@ It supports CRUD operations, deposit and withdrawal functionalities, and account
 | `POST`      | `/`                 | Create a new account.            |
 | `DELETE`    | `/{id}`             | Delete an account by ID.         |
 | `PUT`       | `/{id}`             | Update the name of an account.   |
-| `POST`      | `/{id}/deposit`     | Deposit funds into an account.   |
 | `POST`      | `/{id}/{operation}` | Deposit or withdraw funds.       |
 
 ## Key Functionalities
+
 #### Account Creation
 
-Logic:
+**Logic**:
 - Retrieves the smallest available account number from the AccountPool. If available, assigns that number to the new account.
 - If no available account number is found, it generates a new account number by fetching the maximum existing account number from the repository.
 
-Dependencies: AccountRepository, AccountPoolRepository.
+**Dependencies**: AccountRepository, AccountPoolRepository.
+
 #### Account Deletion
 
-Logic:
+**Logic**:
 - Deletes the specified account by ID and returns the account number to the AccountPool for future use.
 
-Dependencies: AccountRepository, AccountPoolRepository.
+**Dependencies**: AccountRepository, AccountPoolRepository.
+
 #### Update Account Name
 
-Logic:
+**Logic**:
 - Updates the name of the account holder for a given account ID.
 
-Dependencies: AccountRepository.
+**Dependencies**: AccountRepository.
+
 #### Get Account Details
 
-Logic:
+**Logic**:
 - Retrieves an account by its ID.
 
-Dependencies: AccountRepository.
+**Dependencies**: AccountRepository.
+
 #### Deposit Funds
 
-Logic:
+**Logic**:
 - Increases the account balance by the specified deposit amount.
 
-Dependencies: AccountRepository.
+**Dependencies**: AccountRepository.
+
 #### Withdraw Funds
 
-Logic:
+**Logic**:
 - Decreases the account balance by the specified withdrawal amount. Ensures that the balance doesn't go below zero.
 
-Dependencies: AccountRepository.
+**Dependencies**: AccountRepository.
+
 #### Get All Accounts
 
-Logic:
+**Logic**:
 - Retrieves all accounts from the database.
 
-Dependencies: AccountRepository.
+**Dependencies**: AccountRepository.
 
 ## Request and Response Examples
 
@@ -103,7 +109,7 @@ Response:
 }
 ```
 ### 3. Update Account Name
-Endpoint: PUT /{id}
+Endpoint: `PUT /{id}`
 Request:
 
 ```json
@@ -121,7 +127,7 @@ Response:
 }
 ```
 ### 4. Deposit Funds
-Endpoint: POST /{id}/deposit
+Endpoint: `POST /{id}/deposit`
 Request:
 
 ```json
@@ -139,7 +145,7 @@ Response:
 }
 ```
 ### 5. Withdraw Funds
-Endpoint: POST /{id}/withdraw
+Endpoint: `POST /{id}/withdraw`
 Request:
 
 ```json
@@ -165,5 +171,4 @@ Response:
 
 _Author
 Karthik Panagar_
-
 For any queries or suggestions, feel free to reach out!
