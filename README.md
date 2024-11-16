@@ -78,6 +78,7 @@ Response:
 ```
 ### 2. Create an Account
 Endpoint: `POST /`
+
 Request:
 
 ```json
@@ -97,6 +98,7 @@ Response:
 ```
 ### 3. Update Account Name
 Endpoint: `PUT /{id}`
+
 Request:
 
 ```json
@@ -115,6 +117,7 @@ Response:
 ```
 ### 4. Deposit Funds
 Endpoint: `POST /{id}/deposit`
+
 Request:
 
 ```json
@@ -133,6 +136,7 @@ Response:
 ```
 ### 5. Withdraw Funds
 Endpoint: `POST /{id}/withdraw`
+
 Request:
 
 ```json
