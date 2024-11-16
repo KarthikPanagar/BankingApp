@@ -26,41 +26,41 @@ It supports CRUD operations, deposit and withdrawal functionalities, and account
 ## Key Functionalities
 
 ### 1. Account Creation
-**Logic**:
-- Retrieves the smallest available account number from the AccountPool. If available, assigns that number to the new account.
-- If no available account number is found, it generates a new account number by fetching the maximum existing account number from the repository.
+- **Logic**:
+    - Retrieves the smallest available account number from the AccountPool. If available, assigns that number to the new account.
+    - If no available account number is found, it generates a new account number by fetching the maximum existing account number from the repository.
 
-**Dependencies**: AccountRepository, AccountPoolRepository.
+- **Dependencies**: AccountRepository, AccountPoolRepository.
 
 ### 2.  Account Deletion
-**Logic**: Deletes the specified account by ID and returns the account number to the AccountPool for future use.
+- **Logic**: Deletes the specified account by ID and returns the account number to the AccountPool for future use.
 
-**Dependencies**: AccountRepository, AccountPoolRepository.
+- **Dependencies**: AccountRepository, AccountPoolRepository.
 
 ### 3. Get All Accounts
-**Logic**: Retrieves all accounts from the database.
+- **Logic**: Retrieves all accounts from the database.
 
-**Dependencies**: AccountRepository.
+- **Dependencies**: AccountRepository.
 
 ### 4. Update Account Name
-**Logic**: Updates the name of the account holder for a given account ID.
+- **Logic**: Updates the name of the account holder for a given account ID.
 
-**Dependencies**: AccountRepository.
+- **Dependencies**: AccountRepository.
 
 ### 5. Get Account Details
-**Logic**: Retrieves an account by its ID.
+- **Logic**: Retrieves an account by its ID.
 
-**Dependencies**: AccountRepository.
+- **Dependencies**: AccountRepository.
 
 ### 6. Deposit Funds
-**Logic**: Increases the account balance by the specified deposit amount.
+- **Logic**: Increases the account balance by the specified deposit amount.
 
-**Dependencies**: AccountRepository.
+- **Dependencies**: AccountRepository.
 
 ### 7. Withdraw Funds
-**Logic**: Decreases the account balance by the specified withdrawal amount. Ensures that the balance doesn't go below zero.
+- **Logic**: Decreases the account balance by the specified withdrawal amount. Ensures that the balance doesn't go below zero.
 
-**Dependencies**: AccountRepository.
+- **Dependencies**: AccountRepository.
 
 ## Request and Response Examples
 
