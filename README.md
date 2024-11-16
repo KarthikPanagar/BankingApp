@@ -1,6 +1,7 @@
 # Banking Application API
 
-This project provides a RESTful API for managing banking accounts. It supports CRUD operations, deposit and withdrawal functionalities, and account management.
+This project provides a RESTful API for managing banking accounts. 
+It supports CRUD operations, deposit and withdrawal functionalities, and account management.
 
 ## Features
 
@@ -29,44 +30,51 @@ This project provides a RESTful API for managing banking accounts. It supports C
 Logic:
 - Retrieves the smallest available account number from the AccountPool. If available, assigns that number to the new account.
 - If no available account number is found, it generates a new account number by fetching the maximum existing account number from the repository.
+
 Dependencies: AccountRepository, AccountPoolRepository.
 #### Account Deletion
 
 Logic:
 - Deletes the specified account by ID and returns the account number to the AccountPool for future use.
+
 Dependencies: AccountRepository, AccountPoolRepository.
-Update Account Name
+#### Update Account Name
 
 Logic:
 - Updates the name of the account holder for a given account ID.
+
 Dependencies: AccountRepository.
-Get Account Details
+#### Get Account Details
 
 Logic:
 - Retrieves an account by its ID.
+
 Dependencies: AccountRepository.
-Deposit Funds
+#### Deposit Funds
 
 Logic:
 - Increases the account balance by the specified deposit amount.
+
 Dependencies: AccountRepository.
-Withdraw Funds
+#### Withdraw Funds
 
 Logic:
 - Decreases the account balance by the specified withdrawal amount. Ensures that the balance doesn't go below zero.
+
 Dependencies: AccountRepository.
-Get All Accounts
+#### Get All Accounts
 
 Logic:
 - Retrieves all accounts from the database.
+
 Dependencies: AccountRepository.
 
 ## Request and Response Examples
 
-### **1. Get Account by ID**
+### 1. Get Account by ID
 
-**Endpoint:** `GET /{id}`  
-**Response:**
+Endpoint: `GET /{id}`  
+Response:
 
 ```json
 {
@@ -75,8 +83,8 @@ Dependencies: AccountRepository.
   "balance": 1000.0
 }
 ```
-2. Create an Account
-Endpoint: POST /
+### 2. Create an Account
+Endpoint: `POST /`
 Request:
 
 ```json
@@ -94,7 +102,7 @@ Response:
   "balance": 500.0
 }
 ```
-3. Update Account Name
+### 3. Update Account Name
 Endpoint: PUT /{id}
 Request:
 
@@ -112,7 +120,7 @@ Response:
   "balance": 500.0
 }
 ```
-4. Deposit Funds
+### 4. Deposit Funds
 Endpoint: POST /{id}/deposit
 Request:
 
@@ -130,7 +138,7 @@ Response:
   "balance": 700.0
 }
 ```
-5. Withdraw Funds
+### 5. Withdraw Funds
 Endpoint: POST /{id}/withdraw
 Request:
 
@@ -148,18 +156,14 @@ Response:
   "balance": 600.0
 }
 ```
-Error Handling
-Invalid Operation: Returns an error for unsupported operations.
-```json
-{
-  "error": "Invalid operation: [operation]"
-}
-```
+
 **Technologies Used**
 - Java
 - Spring Boot
+- MySQL Database
 - Spring Data JPA
 
 _Author
 Karthik Panagar_
+
 For any queries or suggestions, feel free to reach out!
